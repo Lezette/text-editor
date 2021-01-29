@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useGoogleLogin } from 'react-google-login';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { refreshTokenSetup } from '../../utils/refreshToken';
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Login = () => {
 
   const { setUserInfo } = useContext(UserContext);
+  const history = useHistory();
 
   const clientId = process.env.REACT_APP_CLIENT_ID as string;
 
@@ -25,6 +27,7 @@ const Login = () => {
   const onSuccess = (res: any) => {
     refreshTokenSetup(res);
     setUserInfo(res.profileObj);
+    history.push('/');
   };
 
   const onFailure = (res: any) => {

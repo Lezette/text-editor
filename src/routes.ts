@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { Route } from 'react-router-dom';
+import { ProtectedRoute } from './utils/Gaurd';
 
 
 const Login = lazy(() => import('./views/Login'));
@@ -8,12 +9,12 @@ const Editor = lazy(() => import('./views/Editor'));
 export const routes = [
     {
         component: Login,
-        path: '/',
+        path: '/login',
         RouteType: Route,
     },
     {
         component: Editor,
-        path: '/editor',
-        RouteType: Route,
+        path: '/',
+        RouteType: ProtectedRoute,
     },
 ];

@@ -1,10 +1,11 @@
 // import React from 'react';
+import Logout from '../../components/Logout.tsx'
 
 const Editor = () => {
 
     return (
 
-        <div>Editor</div>
+        <div>Editor <Logout /></div>
     )
 }
 
