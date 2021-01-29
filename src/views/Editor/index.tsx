@@ -33,9 +33,9 @@ const Editor: React.FC = () => {
                 <Grid container item xs={9}>
                     <Grid item xs={12} container spacing={2}>
                         <Grid item xs={4}>
-                           <button>
+                            <button>
                                Open Workspace
-                           </button>
+                           </button> 
                         </Grid>
                         <Grid item xs={4}>
                         <button onClick={toggleTheme} disabled={!isEditorReady}>

@@ -22,6 +22,7 @@
     "react-monaco-editor-ts": "^0.20.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-ui-tree": "^4.0.0",
     "typescript": "^4.1.3",
     "web-vitals": "^0.2.4"
   },
