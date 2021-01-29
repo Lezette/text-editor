@@ -47,7 +47,7 @@ const Login = () => {
 
   
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} container flex center login`}>
        <button onClick={signIn} className="button">
       <span className="buttonText">Sign in with Google</span>
     </button>

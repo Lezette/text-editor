@@ -2,18 +2,9 @@ import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UserContext } from '../context/user';
 
-interface IProtectedRoute {
-    component: any;
-    Component: any;
-    props: any;
-}
-
-export const ProtectedRoute: React.FC<IProtectedRoute> = ({component: Component, ...props}) => {
+export const ProtectedRoute = ({component: Component, ...props}: any) => {
 
     const { userInfo } = useContext(UserContext);
-    console.log('============userInfo========================');
-    console.log(userInfo);
-    console.log('====================================');
 
     return (
         <Route
